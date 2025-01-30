@@ -1,3 +1,6 @@
+from typing import List
+from helpers import run_llm 
+
 def serial_chain_workflow(input_query: str, prompt_chain : List[str]) -> List[str]:
     """Run a serial chain of LLM calls to address the `input_query` 
     using a list of prompts specified in `prompt_chain`.
@@ -20,13 +23,11 @@ prompt_chain = ["""Given the math problem, ONLY extract any relevant numerical i
 
 
 
-def main()
-{
+def main():
     responses = serial_chain_workflow(question, prompt_chain)
     final_answer = responses[-1]
-}
 
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
