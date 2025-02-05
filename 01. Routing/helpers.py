@@ -41,3 +41,4 @@ def JSON_llm(user_prompt: str, schema, system_prompt: str = None):
     except ValidationError as e:
         error_message = f"Failed to parse JSON: {e}"
         print(error_message)
+
